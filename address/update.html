@@ -1,0 +1,25 @@
+<html>
+<meta charset="utf-8">
+<title>新增图书</title>
+</style>
+<div id="header"align="center">
+<h1>新增图书</h1>
+</div>
+<form method="post">
+<table border=1 align="center">
+ <tr>
+  <th>ISBN(PK) 书号</th><th>Title 书名</th><th>authorname 作者</th><th>Publisher 出版商</th><th>PublishDate 出版日期</th><th>Price 价格</th>
+ </tr>
+ <tr>
+  <td><input name="ISBN" type="text"  value={{ book.ISBN }} disabled></td>
+  <td><input name="Title" type="text"  value={{ book.Title }} disabled></td>
+  <td><input name="authorname" type="text" value={{ book.authorname }}></td>
+  <td><input name="Publisher" type="text" value={{ book.Publisher }}></td>
+  <td><input name="PublishDate" type="text" value={{ book.PublishDate }}></td>
+  <td><input name="Price" type="text" value={{ book.Price }}></td>
+  <td><input type="submit" value="保存"></td>
+ </tr>
+ <div style="text-align:center;">
+    <A href="/allbook/">[返回原网页]</A>
+</div>
+</form>

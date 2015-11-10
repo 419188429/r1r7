@@ -1,0 +1,23 @@
+<html>
+<meta charset="utf-8">
+<title>新增作者</title>
+</style>
+<div id="header"align="center">
+<h1>新增作者</h1>
+</div>
+<form method="post">
+<table border=1 align="center">
+ <tr>
+  <th>Name 姓名</th><th>Age 年龄</th><th>Country 国家</th>
+ </tr>
+ <tr>
+  <td><input name="Name" type="text" value={{ new_author.Name }} disabled></td>
+  <td><input name="Age" type="text"></td>
+  <td><input name="Country" type="text"></td>
+  <td><input type="submit" value="保存">       <input type="reset" value="重填">
+ </tr>
+</table>
+<div style="text-align:center;">
+    <A href="/allbook/">[浏览所有图书]</A>
+</div>
+

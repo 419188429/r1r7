@@ -1,0 +1,28 @@
+<html>
+<meta charset="utf-8">
+<head><title>查找到图书</title></head>
+</style>
+<div id="header"align="center">
+<h1>查询结果</h1>
+</div>
+<table border=1 align="center">
+ <tr>
+ <th>ISBN(PK) 书号</th><th>Title 书名</th><th>authorname 作者ID</th><th>Publisher 出版商</th><th>PublishDate 出版日期</th><th>Price 价格</th>
+ </tr>
+{% for book in book_list %}
+ <tr>
+  <td>{{ book.ISBN }}</td>
+  <td><A href="/detail/?id={{book.id}}">{{ book.Title }}</A></td>
+  <td>{{ book.authorname }}</td>
+  <td>{{ book.Publisher }}</td>
+  <td>{{ book.PublishDate }}</td>
+  <td>{{ book.Price }}</td>
+  <td><input type="button" value="删除" onClick="location.href='/deleteok/?id={{book.id}}'">
+<input type="button" value="更新" onClick="location.href='/update/?id={{book.id}}'"></td>
+ </tr>
+{% endfor %}
+<div style="text-align:center;">
+    <A href="/insertbook/">[增添图书]</A> <A href="/search/">[重新搜索图书]</A>
+</div>  
+</table>
+</html>

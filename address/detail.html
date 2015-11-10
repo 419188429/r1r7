@@ -1,0 +1,37 @@
+<html>
+<meta charset="utf-8">
+</style>
+<div id="header"align="center">
+<h1>详细信息</h1>
+</div>
+<title>详细信息</title>
+<p align="right"> <A href="/insertbook/">[增添图书]</A> <A href="/search/">[按作者搜索图书]</A></p>
+<table border=1 align="center">
+ <tr>
+  <th>Name</th><th>Age</th><th>Country</th>
+ </tr>
+  
+ <tr>
+ <td>{{ author.Name }}</td>
+ <td>{{ author.Age }}</td>
+ <td>{{ author.Country }}</td>
+ </table>
+ </tr>
+  <tr>
+  </tr>
+  <tr>
+ <table border=1 align="center">
+ <th>书号</th><th>书名</th><th>作者</th><th>出版商</th><th>出版日期</th><th>价格</th>
+ </tr>
+ <tr>
+  <td>{{ book.ISBN }}</td>
+  <td>{{ book.Title }}</td>
+  <td>{{ book.authorname }}</td>
+  <td>{{ book.Publisher }}</td>
+  <td>{{ book.PublishDate }}</td>
+  <td>{{ book.Price }}</td>
+  <td><input type="button" value="删除" onclick=   "location.href='/deleteok/?id={{book.id}}'">
+<input type="button" value="更新" onClick="location.href='/update/?id={{book.id}}'"></td>
+
+</tr>
+</table>
